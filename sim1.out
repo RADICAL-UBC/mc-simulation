@@ -1,0 +1,95 @@
+
+Number of jobs: 4
+J0   deadline: 160, criticality: HI, WCET(LO): 70, WCET(HI): 75
+J1   deadline: 50, criticality: LO, WCET(LO): 50, WCET(HI): 50
+J2   deadline: 85, criticality: HI, WCET(LO): 8, WCET(HI): 20
+J3   deadline: 65, criticality: HI, WCET(LO): 1, WCET(HI): 15
+Creating state tables ...
+Building LP
+Number of variables: 37,355,920
+Number of constraints: 22,424,235
+Creating objective coefficients array ... 
+Adding variables ... 
+Creating constraints ... 
+prob_sys_criticality_lo 0.007857
+prob_sys_criticality_hi 0.992143
+Delta 0.000000
+Solving LP ... 
+Optimize a model with 22424235 rows, 37355920 columns and 107160130 nonzeros
+Coefficient statistics:
+  Matrix range    [4e-04, 1e+00]
+  Objective range [8e-01, 5e+01]
+  Bounds range    [0e+00, 0e+00]
+  RHS range       [1e+00, 1e+00]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 0 rows and 0 columns (presolve time = 7s) ...
+Presolve removed 5975135 rows and 7126809 columns (presolve time = 11s) ...
+Presolve removed 8009577 rows and 10431130 columns (presolve time = 16s) ...
+Presolve removed 9721807 rows and 13243923 columns (presolve time = 20s) ...
+Presolve removed 11521055 rows and 16260965 columns (presolve time = 25s) ...
+Presolve removed 13693018 rows and 20523118 columns (presolve time = 30s) ...
+Presolve removed 15852441 rows and 24779517 columns (presolve time = 35s) ...
+Presolve removed 17983851 rows and 28795513 columns (presolve time = 40s) ...
+Presolve removed 20273407 rows and 33181079 columns (presolve time = 45s) ...
+Presolve removed 21230469 rows and 34828328 columns (presolve time = 52s) ...
+Presolve removed 21312141 rows and 34910000 columns (presolve time = 55s) ...
+Presolve removed 21321772 rows and 34959240 columns (presolve time = 61s) ...
+Presolve removed 21370636 rows and 35053760 columns (presolve time = 65s) ...
+Presolve removed 21445780 rows and 35197826 columns (presolve time = 71s) ...
+Presolve removed 21618110 rows and 35544457 columns (presolve time = 75s) ...
+Presolve removed 21673206 rows and 35653211 columns
+Presolve time: 92.33s
+Presolved: 751029 rows, 1702709 columns, 3825435 nonzeros
+
+Elapsed ordering time = 5s
+Ordering time: 7.63s
+
+Barrier statistics:
+ AA' NZ     : 2.548e+06
+ Factor NZ  : 1.746e+08 (roughly 2.4 GBytes of memory)
+ Factor Ops : 1.263e+11 (roughly 1 second per iteration)
+ Threads    : 30
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   5.58065108e+04  2.41196421e+01  2.06e+00 1.26e-11  1.00e-02   104s
+   1   5.05439995e+04  2.38165295e+01  1.87e+00 7.58e-02  8.75e-03   105s
+   2   3.76149455e+04  2.31342941e+01  1.39e+00 3.58e-02  6.43e-03   107s
+   3   1.54082284e+04  2.23502766e+01  5.68e-01 3.45e-03  2.86e-03   108s
+   4   3.40431304e+02  2.22780815e+01  1.17e-02 1.05e-12  6.02e-05   109s
+   5   1.00138065e+02  2.25685221e+01  2.81e-03 5.54e-13  1.49e-05   111s
+   6   4.28134340e+01  2.28544055e+01  6.91e-04 9.53e-13  4.07e-06   112s
+   7   2.73331765e+01  2.33247081e+01  1.19e-04 9.87e-13  9.80e-07   113s
+   8   2.51837186e+01  2.36924334e+01  3.93e-05 7.90e-13  3.86e-07   114s
+   9   2.43314039e+01  2.39242382e+01  7.82e-06 7.39e-13  1.33e-07   116s
+  10   2.41669428e+01  2.40290017e+01  1.75e-06 1.03e-12  5.57e-08   117s
+  11   2.41278044e+01  2.40850855e+01  3.01e-07 1.36e-12  2.04e-08   118s
+  12   2.41203213e+01  2.41128860e+01  2.51e-08 9.91e-13  3.95e-09   119s
+  13   2.41196981e+01  2.41180333e+01  2.07e-09 6.68e-13  9.40e-10   120s
+  14   2.41196422e+01  2.41196040e+01  2.27e-12 7.53e-13  2.22e-11   121s
+  15   2.41196421e+01  2.41196421e+01  4.72e-15 7.39e-13  2.22e-14   123s
+
+Barrier solved model in 15 iterations and 122.61 seconds
+Optimal objective 2.41196421e+01
+
+Crossover log...
+
+  316294 DPushes remaining with DInf 3.9954111e-04               125s
+   87437 DPushes remaining with DInf 5.4853803e-04               126s
+
+Solved with primal simplex
+Solved in 23167 iterations and 149.93 seconds
+Optimal objective  2.411964210e+01
+Optimal objective: 2.4120e+01
+
+
+Simulating execution over 100000 demand samples (vectors) 
++=======================Simulation Stats=======================
++ Number of samples: 100000
++ Number of deadline misses per job:
+     J0: (0/100000)   J1: (0/100000)   J2: (0/100000)   J3: (0/100000)   
++ Total number of error executions: (0/100000)
++==============================================================

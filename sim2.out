@@ -1,0 +1,140 @@
+
+Number of jobs: 4
+J0   deadline: 218, criticality: LO, WCET(LO): 100, WCET(HI): 100
+J1   deadline: 50, criticality: LO, WCET(LO): 50, WCET(HI): 50
+J2   deadline: 58, criticality: LO, WCET(LO): 8, WCET(HI): 8
+J3   deadline: 119, criticality: HI, WCET(LO): 60, WCET(HI): 61
+Creating state tables ...
+Building LP
+Number of variables: 106,356,618
+Number of constraints: 57,064,647
+Creating objective coefficients array ... 
+Adding variables ... 
+Creating constraints ... 
+prob_sys_criticality_lo 0.955990
+prob_sys_criticality_hi 0.044010
+Delta 0.000000
+Solving LP ... 
+Optimize a model with 57064647 rows, 106356618 columns and 320434680 nonzeros
+Coefficient statistics:
+  Matrix range    [3e-04, 1e+00]
+  Objective range [9e-01, 1e+02]
+  Bounds range    [0e+00, 0e+00]
+  RHS range       [1e+00, 1e+00]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 0 rows and 0 columns (presolve time = 20s) ...
+Presolve removed 11983162 rows and 30226717 columns (presolve time = 29s) ...
+Presolve removed 29964548 rows and 58712567 columns (presolve time = 46s) ...
+Presolve removed 31597824 rows and 61615090 columns (presolve time = 51s) ...
+Presolve removed 33245707 rows and 64974892 columns (presolve time = 56s) ...
+Presolve removed 34519837 rows and 67607448 columns (presolve time = 61s) ...
+Presolve removed 36064636 rows and 70822716 columns (presolve time = 66s) ...
+Presolve removed 37544502 rows and 73926776 columns (presolve time = 71s) ...
+Presolve removed 38947539 rows and 76890375 columns (presolve time = 76s) ...
+Presolve removed 40518623 rows and 80224570 columns (presolve time = 80s) ...
+Presolve removed 42190606 rows and 83771502 columns (presolve time = 86s) ...
+Presolve removed 43694812 rows and 86936790 columns (presolve time = 90s) ...
+Presolve removed 45583754 rows and 90834216 columns (presolve time = 95s) ...
+Presolve removed 47534643 rows and 94826369 columns (presolve time = 100s) ...
+Presolve removed 49547252 rows and 98785886 columns (presolve time = 105s) ...
+Presolve removed 51732648 rows and 103140567 columns (presolve time = 110s) ...
+Presolve removed 55903012 rows and 103927542 columns (presolve time = 116s) ...
+Presolve removed 55903012 rows and 103928718 columns (presolve time = 124s) ...
+Presolve removed 55904294 rows and 103930000 columns (presolve time = 126s) ...
+Presolve removed 55967487 rows and 103993193 columns (presolve time = 138s) ...
+Presolve removed 55970807 rows and 104021513 columns (presolve time = 144s) ...
+Presolve removed 55970807 rows and 104026019 columns (presolve time = 146s) ...
+Presolve removed 56005722 rows and 104091532 columns (presolve time = 151s) ...
+Presolve removed 56042909 rows and 104165941 columns (presolve time = 156s) ...
+Presolve removed 56084168 rows and 104246233 columns (presolve time = 161s) ...
+Presolve removed 56164328 rows and 104383663 columns (presolve time = 165s) ...
+Presolve removed 56201563 rows and 104469868 columns (presolve time = 171s) ...
+Presolve removed 56201563 rows and 104469868 columns
+Presolve time: 211.79s
+Presolved: 863084 rows, 1886750 columns, 4067812 nonzeros
+
+Elapsed ordering time = 5s
+Ordering time: 6.57s
+
+Barrier statistics:
+ AA' NZ     : 2.509e+06
+ Factor NZ  : 1.186e+08 (roughly 2.0 GBytes of memory)
+ Factor Ops : 6.923e+10 (roughly 1 second per iteration)
+ Threads    : 30
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   5.07250675e+04  1.88065082e+00  1.08e+00 2.11e+00  4.76e-01   222s
+   1   4.87460183e+04 -8.87237147e+00  1.03e+00 3.98e+00  4.44e-01   223s
+   2   4.49986032e+04 -2.20996825e+01  9.42e-01 3.50e+00  3.97e-01   224s
+   3   3.91416378e+04 -4.02546494e+01  8.09e-01 2.66e+00  3.29e-01   225s
+   4   3.71285183e+04 -4.75175766e+01  7.65e-01 2.36e+00  3.07e-01   226s
+   5   3.22741639e+04 -5.98678037e+01  6.59e-01 1.86e+00  2.59e-01   227s
+   6   2.63952650e+04 -7.39132072e+01  5.34e-01 1.30e+00  2.05e-01   228s
+   7   1.81426453e+04 -9.57808507e+01  3.62e-01 5.40e-01  1.39e-01   229s
+   8   8.09616021e+03 -1.05900558e+02  1.59e-01 2.25e-01  6.20e-02   230s
+   9   1.81878801e+03 -1.11538293e+02  3.55e-02 2.11e-02  1.42e-02   231s
+  10   1.99475024e+02 -1.01294815e+02  3.85e-03 0.00e+00  1.59e-03   232s
+  11   1.08598068e+02 -8.01483689e+01  2.07e-03 0.00e+00  8.55e-04   233s
+  12   5.44448233e+01 -6.52093263e+01  1.02e-03 0.00e+00  4.26e-04   234s
+  13   3.57234447e+01 -5.29200279e+01  6.52e-04 0.00e+00  2.74e-04   235s
+  14   2.58847912e+01 -4.47261911e+01  4.61e-04 0.00e+00  1.93e-04   236s
+  15   1.28018691e+01 -3.29535672e+01  2.07e-04 0.00e+00  9.01e-05   237s
+  16   7.04034900e+00 -2.15593526e+01  9.53e-05 0.00e+00  4.26e-05   238s
+  17   4.52149473e+00 -1.54593646e+01  4.70e-05 0.00e+00  2.28e-05   239s
+  18   3.69006921e+00 -1.09947493e+01  3.13e-05 0.00e+00  1.50e-05   240s
+  19   3.05088179e+00 -7.38332177e+00  1.95e-05 0.00e+00  9.42e-06   240s
+  20   2.52465135e+00 -4.32205904e+00  1.04e-05 0.00e+00  5.36e-06   241s
+  21   2.30684211e+00 -2.52012690e+00  7.03e-06 0.00e+00  3.51e-06   242s
+  22   1.97619474e+00 -5.16811929e-01  2.60e-06 0.00e+00  1.56e-06   243s
+  23   1.78532300e+00  4.48805279e-01  9.01e-07 0.00e+00  7.60e-07   245s
+  24   1.69556325e+00  8.97209998e-01  4.83e-07 0.00e+00  4.38e-07   246s
+  25   1.60714603e+00  1.13569346e+00  2.25e-07 0.00e+00  2.53e-07   246s
+  26   1.53509531e+00  1.26586746e+00  9.94e-08 0.00e+00  1.43e-07   247s
+  27   1.47960576e+00  1.33539542e+00  4.14e-08 0.00e+00  7.60e-08   248s
+  28   1.43311688e+00  1.36914155e+00  1.17e-08 0.00e+00  3.37e-08   249s
+  29   1.40568905e+00  1.38315826e+00  9.91e-10 0.00e+00  1.19e-08   250s
+  30   1.39668250e+00  1.38808987e+00  1.30e-10 0.00e+00  4.55e-09   251s
+  31   1.39464192e+00  1.38948314e+00  6.20e-11 0.00e+00  2.73e-09   252s
+  32   1.39228012e+00  1.39050470e+00  8.64e-12 0.00e+00  9.40e-10   253s
+  33   1.39176395e+00  1.39124699e+00  1.24e-12 0.00e+00  2.74e-10   254s
+  34   1.39160885e+00  1.39150975e+00  1.71e-13 0.00e+00  5.25e-11   255s
+  35   1.39159023e+00  1.39158019e+00  9.45e-14 0.00e+00  5.31e-12   256s
+  36   1.39158903e+00  1.39158900e+00  1.53e-13 4.76e-14  1.62e-14   257s
+  37   1.39158901e+00  1.39158901e+00  1.73e-13 5.41e-14  7.08e-19   258s
+
+Barrier solved model in 37 iterations and 257.78 seconds
+Optimal objective 1.39158901e+00
+
+Crossover log...
+
+  797108 DPushes remaining with DInf 0.0000000e+00               258s
+   77327 DPushes remaining with DInf 0.0000000e+00               261s
+       0 DPushes remaining with DInf 2.1525263e-11               264s
+
+   37696 PPushes remaining with PInf 1.6539960e-04               265s
+   18948 PPushes remaining with PInf 1.8574398e-05               265s
+       0 PPushes remaining with PInf 0.0000000e+00               268s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.1182351e-11    268s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  834807    1.3915890e+00   0.000000e+00   0.000000e+00    269s
+  834807    1.3915890e+00   0.000000e+00   0.000000e+00    337s
+
+Solved with primal simplex
+Solved in 102374 iterations and 387.12 seconds
+Optimal objective  1.391589011e+00
+Optimal objective: 1.3916e+00
+
+
+Simulating execution over 100000 demand samples (vectors) 
++=======================Simulation Stats=======================
++ Number of samples: 100000
++ Number of deadline misses per job:
+     J0: (0/100000)   J1: (0/100000)   J2: (0/100000)   J3: (0/100000)   
++ Total number of error executions: (0/100000)
++==============================================================
