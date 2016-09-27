@@ -1723,39 +1723,47 @@ int main(int argc, char *argv[]){
 	++index;
 	admissible_saps_list_tail = admissible_saps_list_tail->next;
       }
-      
-      assert(definitely_greater_than(sum_admissible_saps_lp_solutions, 0));
-      
-      /* printf( "sum=%lf\n", sum_admissible_saps_lp_solutions); */
-      
-      /* Normalize sap_pmf */
-      for(index = 0; index < s->num_admissible_saps; ++index) {
-	/* printf( "sap: %lf \n", sap_pmf[index]); */
-	sap_pmf[index] = (sap_pmf[index]/sum_admissible_saps_lp_solutions);
-	/* printf( "sap normalized: %lf \n", sap_pmf[index]); */
-	assert(definitely_less_than_or_equal(sap_pmf[index], 1));
+
+      /* sum_admissible_saps_lp_solutions can be zero. If so, choose the action 
+      /* arbitrarily. Choose the first action */
+
+      int action = 0;
+      if(definitely_greater_than(sum_admissible_saps_lp_solutions, 0)) {
+	
+	/* Normalize sap_pmf */
+	for(index = 0; index < s->num_admissible_saps; ++index) {
+	  /* printf( "sap: %lf \n", sap_pmf[index]); */
+	  sap_pmf[index] = (sap_pmf[index]/sum_admissible_saps_lp_solutions);
+	  /* printf( "sap normalized: %lf \n", sap_pmf[index]); */
+	  assert(definitely_less_than_or_equal(sap_pmf[index], 1));
+	}
+	/* printf( "ok\n"); */
+	/* Now sample a state-action pair (sap) pointer from sap_pmf */
+	/* action is the index of a job  */
+	ransampl_ws *sap_index_ws = ransampl_alloc( s->num_admissible_saps );
+	ransampl_set( sap_index_ws, sap_pmf );
+	int sap_index_decision = ransampl_draw( sap_index_ws,
+						gsl_rng_uniform(rng),
+						gsl_rng_uniform(rng) );
+	
+	/* printf( "number of admissible actions: %d\n", s->num_admissible_saps); */
+	
+	action = admissible_sap_pointers[sap_index_decision]->action;
+
+	ransampl_free( sap_index_ws );
+	free(sap_pmf);
+	free(admissible_sap_pointers);
+	
+      } else {
+	
+	action = admissible_sap_pointers[0]->action;
+	
       }
-      /* printf( "ok\n"); */
-      /* Now sample a state-action pair (sap) pointer from sap_pmf */
-      /* action is the index of a job  */
-      ransampl_ws *sap_index_ws = ransampl_alloc( s->num_admissible_saps );
-      ransampl_set( sap_index_ws, sap_pmf );
-      int sap_index_decision = ransampl_draw( sap_index_ws,
-					      gsl_rng_uniform(rng),
-					      gsl_rng_uniform(rng) );
-      
-      /* printf( "number of admissible actions: %d\n", s->num_admissible_saps); */
-      
-      int action = admissible_sap_pointers[sap_index_decision]->action;
       
       /* printf( "Job (%d) chosen at time (%lu) with probability %lf\n\n", */
       /* 	     action, sim_time, sap_pmf[sap_index_decision]); */
       
       /* printf( "after acting\n"); */
-      
-      ransampl_free( sap_index_ws );
-      free(sap_pmf);
-      free(admissible_sap_pointers);
       
       assert(action != NO_ACTION);
       assert(sim_state->finish_signal_vector[action] != FINISHED);
