@@ -1226,7 +1226,7 @@ int main(int argc, char *argv[]){
   num_state_action_pairs = 0;
   
   double epsilon_lo = 0.4;
-  double epsilon_hi = 0.5;
+  double epsilon_hi = 0.3;
   
   /* If job is HI criticality, must always maintain:
      arr_wcets_at_criticalities[LO] < arr_wcets_at_criticalities[HI] */
@@ -1542,6 +1542,9 @@ int main(int argc, char *argv[]){
   
   double delta = min((prob_sys_criticality_lo * epsilon_lo),
 		     (prob_sys_criticality_hi * epsilon_hi));
+
+  printf( "epsilon_lo %lf\n", epsilon_lo); 
+  printf( "epsilon_hi %lf\n", epsilon_hi); 
   
   printf( "prob_sys_criticality_lo %lf\n", prob_sys_criticality_lo); 
   printf( "prob_sys_criticality_hi %lf\n", prob_sys_criticality_hi); 
