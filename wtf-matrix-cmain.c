@@ -1230,19 +1230,21 @@ int main(int argc, char *argv[]){
   
   /* If job is HI criticality, must always maintain:
      arr_wcets_at_criticalities[LO] < arr_wcets_at_criticalities[HI] */
+
+  /* Input jobset */
   
   job *j = &arr_jobs[0];
-  j->deadline    = 218;
+  j->deadline    = 70;
   j->criticality = LO;
-  j->arr_wcets_at_criticalities[LO] = 100;
+  j->arr_wcets_at_criticalities[LO] = 20;
   /* j->arr_wcets_at_criticalities[HI] = 50; */
   j->execution_time_pmf =
     generate_execution_time_pmf(j->arr_wcets_at_criticalities[j->criticality]);
   
   j = &arr_jobs[1];
-  j->deadline    = 50;
+  j->deadline    = 80;
   j->criticality = LO;
-  j->arr_wcets_at_criticalities[LO] = 50;
+  j->arr_wcets_at_criticalities[LO] = 30;
   /* No need to set arr_wcets_at_criticalities[HI] in case job is LO 
      criticality. Any other entries of arr_wcets_at_criticalities will not be
      looked at in the code in this case. */
@@ -1250,18 +1252,18 @@ int main(int argc, char *argv[]){
     generate_execution_time_pmf(j->arr_wcets_at_criticalities[j->criticality]);
   
   j = &arr_jobs[2];
-  j->deadline    = 58;
-  j->criticality = LO;
-  j->arr_wcets_at_criticalities[LO] = 8;
-  /* j->arr_wcets_at_criticalities[HI] = 30; */
+  j->deadline    = 50;
+  j->criticality = HI;
+  j->arr_wcets_at_criticalities[LO] = 27;
+  j->arr_wcets_at_criticalities[HI] = 30;
   j->execution_time_pmf =
     generate_execution_time_pmf(j->arr_wcets_at_criticalities[j->criticality]);
   
   j = &arr_jobs[3];
-  j->deadline    = 100;
+  j->deadline    = 70;
   j->criticality = HI;
-  j->arr_wcets_at_criticalities[LO]        = 60;
-  j->arr_wcets_at_criticalities[HI]        = 61;
+  j->arr_wcets_at_criticalities[LO]        = 8;
+  j->arr_wcets_at_criticalities[HI]        = 25;
   j->execution_time_pmf =
     generate_execution_time_pmf(j->arr_wcets_at_criticalities[j->criticality]);
   
@@ -1445,7 +1447,12 @@ int main(int argc, char *argv[]){
   if (error) goto QUIT;
 
   /* GRB_INT_PAR_METHOD = 0: Primal Simplex */
-  error = GRBsetintparam(model_env, GRB_INT_PAR_METHOD, 0);
+  /*                      1: Dual Simplex */
+  /*                      2: Barrier */
+  /*                      3: Nondeterministic Concurrent */
+  /*                      4: Dterministic Concurrent */
+  /* error = GRBsetintparam(model_env, GRB_INT_PAR_METHOD, 0); */
+			 
   if (error) goto QUIT;
   
   /* Integrate new variables */
@@ -1891,16 +1898,14 @@ int main(int argc, char *argv[]){
   /* Free environment */
   
   GRBfreeenv(master_env);
-
-
-
   
   char *sched_str = is_ocbp_schedulable ? "YES" : "NO";
   printf( "OCBP Schdulability: %s\n", sched_str);
+  fflush(stdout);
   
-  char str[20];
-  printf( "Done. Press any key to continue ...\n");
-  scanf("%s", str);
+  /* char str[20]; */
+  /* printf( "Done. Press any key to continue ...\n"); */
+  /* scanf("%s", str); */
   return 0;
   
   /* ul num_invlid_states = 0; */
