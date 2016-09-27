@@ -1,0 +1,49 @@
+
+Number of jobs: 3
+J0   deadline: 90, criticality: LO, WCET(LO): 50, WCET(HI): 50
+J1   deadline: 50, criticality: LO, WCET(LO): 30, WCET(HI): 30
+J2   deadline: 35, criticality: HI, WCET(LO): 19, WCET(HI): 30
+Creating state tables ...
+Building LP
+Number of variables: 666,835
+Number of constraints: 483,931
+Creating objective coefficients array ... 
+Adding variables ... 
+Creating constraints ... 
+prob_sys_criticality_lo 0.581506
+prob_sys_criticality_hi 0.418494
+Delta 0.209247
+Solving LP ... 
+Optimize a model with 483931 rows, 666835 columns and 1823445 nonzeros
+Coefficient statistics:
+  Matrix range    [2e-03, 1e+00]
+  Objective range [9e-01, 7e+01]
+  Bounds range    [0e+00, 0e+00]
+  RHS range       [2e-01, 1e+00]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 349128 rows and 370157 columns
+Presolve time: 2.47s
+Presolved: 134803 rows, 296678 columns, 704720 nonzeros
+
+Ordering time: 2.27s
+
+Barrier performed 0 iterations in 4.80 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 630 iterations and 5.16 seconds
+Optimal objective  0.000000000e+00
+Optimal objective: 0.0000e+00
+
+
+Simulating execution over 100000 demand samples (vectors) 
++=======================Simulation Stats=======================
++ Number of samples: 100000
++ Number of deadline misses per job:
+     J0: (4493/100000)   J1: (33981/100000)   J2: (0/100000)   
++ Total number of error executions: (2342/100000)
++==============================================================
