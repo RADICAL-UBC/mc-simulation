@@ -1,0 +1,181 @@
+
+Number of jobs: 4
+J0   deadline: 70, criticality: LO, WCET(LO): 20, WCET(HI): 20
+J1   deadline: 80, criticality: LO, WCET(LO): 30, WCET(HI): 30
+J2   deadline: 50, criticality: HI, WCET(LO): 27, WCET(HI): 30
+J3   deadline: 70, criticality: HI, WCET(LO): 8, WCET(HI): 25
+Creating state tables ...
+Building LP
+Number of variables: 14,369,820
+Number of constraints: 8,991,767
+Creating objective coefficients array ... 
+Adding variables ... 
+Creating constraints ... 
+prob_sys_criticality_lo 0.431580
+prob_sys_criticality_hi 0.568420
+Delta 0.172632
+Solving LP ... 
+Optimize a model with 8991767 rows, 14369820 columns and 41325940 nonzeros
+Coefficient statistics:
+  Matrix range    [6e-03, 1e+00]
+  Objective range [7e-01, 4e+01]
+  Bounds range    [0e+00, 0e+00]
+  RHS range       [2e-01, 1e+00]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 2693108 rows and 2811434 columns (presolve time = 5s) ...
+Presolve removed 3830931 rows and 4007929 columns (presolve time = 14s) ...
+Presolve removed 3830931 rows and 4008023 columns (presolve time = 23s) ...
+Presolve removed 3832908 rows and 4010000 columns (presolve time = 26s) ...
+Presolve removed 4832908 rows and 5010000 columns (presolve time = 31s) ...
+Presolve removed 4858532 rows and 5035624 columns (presolve time = 35s) ...
+Presolve removed 4868703 rows and 5104011 columns (presolve time = 41s) ...
+Presolve removed 4868703 rows and 5111565 columns (presolve time = 49s) ...
+Presolve removed 4945000 rows and 5260271 columns (presolve time = 53s) ...
+Presolve removed 4976277 rows and 5350429 columns (presolve time = 55s) ...
+Presolve removed 5026361 rows and 5436117 columns (presolve time = 61s) ...
+Presolve removed 5089741 rows and 5569589 columns (presolve time = 66s) ...
+Presolve removed 5194114 rows and 5813417 columns (presolve time = 70s) ...
+Presolve removed 5303354 rows and 6001308 columns (presolve time = 76s) ...
+Presolve removed 5480018 rows and 6308550 columns (presolve time = 80s) ...
+Presolve removed 5480018 rows and 6358198 columns
+Presolve time: 89.85s
+Presolved: 3511749 rows, 8011622 columns, 21102624 nonzeros
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 10s
+Elapsed ordering time = 15s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 106s
+Elapsed ordering time = 111s
+Elapsed ordering time = 117s
+Elapsed ordering time = 120s
+Elapsed ordering time = 126s
+Elapsed ordering time = 130s
+Elapsed ordering time = 135s
+Elapsed ordering time = 140s
+Elapsed ordering time = 145s
+Elapsed ordering time = 150s
+Elapsed ordering time = 155s
+Elapsed ordering time = 160s
+Elapsed ordering time = 165s
+Elapsed ordering time = 170s
+Elapsed ordering time = 175s
+Elapsed ordering time = 180s
+Elapsed ordering time = 185s
+Elapsed ordering time = 190s
+Elapsed ordering time = 195s
+Elapsed ordering time = 200s
+Elapsed ordering time = 205s
+Elapsed ordering time = 210s
+Elapsed ordering time = 215s
+Elapsed ordering time = 220s
+Elapsed ordering time = 225s
+Elapsed ordering time = 230s
+Elapsed ordering time = 235s
+Elapsed ordering time = 240s
+Elapsed ordering time = 317s
+Elapsed ordering time = 325s
+Elapsed ordering time = 331s
+Elapsed ordering time = 337s
+Elapsed ordering time = 342s
+Elapsed ordering time = 345s
+Elapsed ordering time = 350s
+Elapsed ordering time = 355s
+Elapsed ordering time = 360s
+Elapsed ordering time = 365s
+Elapsed ordering time = 370s
+Elapsed ordering time = 375s
+Elapsed ordering time = 380s
+Elapsed ordering time = 385s
+Elapsed ordering time = 390s
+Elapsed ordering time = 395s
+Elapsed ordering time = 400s
+Elapsed ordering time = 405s
+Elapsed ordering time = 410s
+Elapsed ordering time = 415s
+Elapsed ordering time = 420s
+Elapsed ordering time = 425s
+Elapsed ordering time = 430s
+Elapsed ordering time = 435s
+Elapsed ordering time = 440s
+Elapsed ordering time = 445s
+Elapsed ordering time = 450s
+Elapsed ordering time = 455s
+Elapsed ordering time = 460s
+Elapsed ordering time = 465s
+Elapsed ordering time = 470s
+Elapsed ordering time = 475s
+Elapsed ordering time = 480s
+Elapsed ordering time = 485s
+Elapsed ordering time = 505s
+Elapsed ordering time = 512s
+Elapsed ordering time = 518s
+Elapsed ordering time = 521s
+Elapsed ordering time = 525s
+Elapsed ordering time = 531s
+Elapsed ordering time = 536s
+Elapsed ordering time = 540s
+Elapsed ordering time = 546s
+Elapsed ordering time = 550s
+Elapsed ordering time = 555s
+Elapsed ordering time = 560s
+Elapsed ordering time = 565s
+Elapsed ordering time = 570s
+Elapsed ordering time = 575s
+Elapsed ordering time = 580s
+Elapsed ordering time = 585s
+Elapsed ordering time = 590s
+Elapsed ordering time = 595s
+Elapsed ordering time = 600s
+Elapsed ordering time = 605s
+Elapsed ordering time = 610s
+Elapsed ordering time = 615s
+Elapsed ordering time = 620s
+Elapsed ordering time = 625s
+Elapsed ordering time = 630s
+Elapsed ordering time = 635s
+Elapsed ordering time = 640s
+Elapsed ordering time = 645s
+Elapsed ordering time = 650s
+Elapsed ordering time = 655s
+Elapsed ordering time = 660s
+Elapsed ordering time = 690s
+Elapsed ordering time = 696s
+Elapsed ordering time = 711s
+Ordering time: 711.38s
+
+Barrier performed 0 iterations in 803.04 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 111974 iterations and 811.58 seconds
+Optimal objective  0.000000000e+00
+Optimal objective: 0.0000e+00
+
+
+Simulating execution over 100000 demand samples (vectors) 
++=======================Simulation Stats=======================
++ Number of samples: 100000
++ Number of deadline misses per job:
+     J0: (240/100000)   J1: (1669/100000)   J2: (0/100000)   J3: (183/100000)   
++ Total number of error executions: (192/100000)
++==============================================================
+OCBP Schdulability: NO
